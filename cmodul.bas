@@ -4,7 +4,7 @@ ModulesStructureVersion=1
 B4A=true
 @EndOfDesignText@
 #Region  Service Attributes 
-	#StartAtBoot: False
+	#StartAtBoot: true
 	
 #End Region
 Sub Process_Globals
@@ -23,6 +23,7 @@ Sub Process_Globals
 	Private kvst,kvsdata,alist,dbase,abase,qbase As KeyValueStore
 	Private apli As List
 	Private pack As PackageManager
+	Private package As String="sclean2.com"
 End Sub
 
 Sub Service_Create
@@ -52,6 +53,7 @@ Sub Service_Create
 		File.MakeDir(File.DirInternal,"Bdata/temp")
 		File.WriteList(dir,"clist.txt",obj)
 	End If
+	
 End Sub
 
 Sub Service_Start (StartingIntent As Intent)
@@ -64,6 +66,7 @@ End Sub
 
 Sub start
 	cb.ScanCache
+	kvsdata.DeleteAll
 End Sub
 
 Sub info_remote
@@ -86,7 +89,7 @@ End Sub
 Sub cb_onScanProgress(Current As Int , Total As Int)
 	kvsdata.Put("to",Total)
 	kvsdata.Put("c",Current)
-	CallSub(Main,"update_modul")
+	CallSubDelayed(Main,"update_modul")
 End Sub
 
 Sub cb_onScanCompleted(AppsList As Object)
@@ -99,16 +102,15 @@ Sub cb_onScanCompleted(AppsList As Object)
 	
 	Try
 		Dim lu As List = AppsList
-	
-	
 		For n = 0 To lu.Size-1
 			app= lu.Get(n)
 			If app(1) = "com.android.systemui"  Then  Continue 'com.android.systemui This Pakage Have No Icon In Some Android 5
 			icon = pm.GetApplicationIcon(app(1))
 			totalsize = totalsize+app(2)
 			alist.Put(app(1),totalsize+app(2))
+			alist.Remove(package)
 			obj.Add(app(1))
-			kvsdata.PutBitmap(app(1),icon.Bitmap)
+			kvsdata.PutBitmap(n,icon.Bitmap)
 			qbase.Remove("com.android.systemui")
 		Next
 	Catch
@@ -116,12 +118,12 @@ Sub cb_onScanCompleted(AppsList As Object)
 	End Try
 	If lu.size > 0 Then
 		Log("T-Size: "&FormatFileSize(totalsize))
-		kvsdata.Put("cz",FormatFileSize(totalsize))
+		kvsdata.Put("cp",totalsize)
 		CallSub(Main,"c_start")
 	Else
 		Log("nothing to show")
-		CallSub(Main,"finish_modul")
-		Return
+		CallSubDelayed(Main,"finish_modul")
+	
 	End If
 End Sub
 
@@ -138,6 +140,7 @@ Sub cb_onCleanCompleted(CacheSize As Long)
 	Log(CacheSize&" cleaned")
 	kvst.DeleteAll
 	kvsdata.Put("cz",FormatFileSize(CacheSize))
+	
 	'CallSub(Main,"finish_modul")
 End Sub
 

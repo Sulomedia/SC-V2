@@ -14,7 +14,7 @@ public static Object getObject() {
 public static String _setanimat = "";
 public sclean2.com.main _main = null;
 public sclean2.com.starter _starter = null;
-public sclean2.com.cmodul _cmodul = null;
+public sclean2.com.sub2 _sub2 = null;
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 5;BA.debugLine="Dim setanimat As String";

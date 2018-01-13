@@ -28,8 +28,8 @@ public anywheresoftware.b4a.sql.SQL _sql1 = null;
 public anywheresoftware.b4a.randomaccessfile.B4XSerializator _ser = null;
 public sclean2.com.main _main = null;
 public sclean2.com.starter _starter = null;
-public sclean2.com.cmodul _cmodul = null;
 public sclean2.com.animator _animator = null;
+public sclean2.com.sub2 _sub2 = null;
 public String  _class_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Sub Class_Globals";
  //BA.debugLineNum = 3;BA.debugLine="Private sql1 As SQL";

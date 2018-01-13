@@ -1,55 +1,67 @@
 ﻿Version=7.01
 NumberOfModules=4
 Module1=Starter
-Module2=cmodul
-Module3=KeyValueStore
-Module4=Animator
+Module2=KeyValueStore
+Module3=Animator
+Module4=sub2
 Build1=sc_v2,sclean2.com
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="13" android:targetSdkVersion="25"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>~\n~	android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>~\n~<uses-permission ~\n~android:name="android.launcher.permission.INSTALL_SHORTCUT"/>~\n~<uses-permission ~\n~ android:name="android.permission.CLEAR_APP_CACHE"/>~\n~<uses-permission ~\n~ android:name="android.permission.GET_PACKAGE_SIZE"/>~\n~<uses-permission ~\n~ android:name="android.permission.GET_TASKS"/>~\n~<uses-permission~\n~  android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>~\n~<uses-permission~\n~  android:name="android.permission.READ_EXTERNAL_STORAGE"/>~\n~<uses-permission~\n~  android:name="android.permission.WRITE_SECURE_SETTINGS"/>~\n~<uses-permission~\n~ android:name="android.permission.PACKAGE_USAGE_STATS"/>~\n~<uses-permission~\n~  android:name="android.permission.BATTERY_STATS"/>~\n~<uses-permission~\n~  android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>~\n~<uses-permission~\n~  android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>~\n~<uses-permission~\n~  android:name="android.permission.SET_ALWAYS_FINISH"/>~\n~<uses-permssion~\n~  android:name="android.permission.UPDATE_DEVICE_STATS"/>~\n~<uses-permission~\n~  android:name="android.permission.BIND_APPWIDGET"/> ~\n~<uses-permission~\n~  android:name="android.permission.REORDER_TASKS"/> ~\n~ )~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~SetApplicationAttribute(android:theme, "@style/MyAppTheme")~\n~AddApplicationText(<service android:name="com.frozendevs.cache.cleaner.model.CleanerService"/>)~\n~CreateResource(values, theme.xml,~\n~<resources>~\n~    <style name="MyAppTheme" parent="Theme.AppCompat">~\n~        <item name="colorPrimary">#2196F3</item>~\n~        <item name="colorPrimaryDark">#2196F3</item>~\n~        <item name="colorAccent">#24DCEE</item>~\n~        <item name="windowNoTitle">true</item>~\n~        <item name="windowActionBar">true</item>~\n~    </style>~\n~</resources>~\n~)
 IconFile=
-NumberOfFiles=15
+NumberOfFiles=24
 File1=1.bal
-File2=accept256.png
-File3=flaticon.ttf
-File4=ic_adb_white_36dp.png
-File5=ic_apps_white_36dp.png
-File6=ic_autorenew_white_36dp.png
-File7=ic_done_all_white_36dp.png
-File8=ic_exit_to_app_white_48dp.png
-File9=ic_extension_white_36dp.png
-File10=ic_https_white_36dp.png
-File11=ic_memory_white_36dp.png
-File12=ic_message_white_36dp.png
-File13=ic_settings_applications_white_36dp.png
-File14=left.bal
-File15=sc-logo.png
-NumberOfLibraries=21
+File2=app.png
+File3=bclean.png
+File4=database.png
+File5=exit.png
+File6=ic_new_releases_black_18dp.png
+File7=ic_sms_failed_black_36dp.png
+File8=l_10646.ttf
+File9=left.bal
+File10=list.png
+File11=menu-1.png
+File12=micross.ttf
+File13=more-2.png
+File14=performance.png
+File15=push-pin.png
+File16=right.bal
+File17=sc-logo.png
+File18=share-2.png
+File19=smartphone.png
+File20=smartphone-1.png
+File21=smartphone-11.png
+File22=smartphone-8.png
+File23=success.png
+File24=warning.png
+NumberOfLibraries=24
 Library1=core
 Library2=appcompat
 Library3=b4xencryption
 Library4=cachecleaner
 Library5=circlebutton
-Library6=circleprogressmaster
-Library7=circletimerview
-Library8=coloringloadingview
-Library9=materialcolors
-Library10=materialdialogs
-Library11=oslibrary
-Library12=osstats
-Library13=phone
-Library14=sql
-Library15=xmlrpc
-Library16=reflection
-Library17=xmlbuilder
-Library18=javaobject
-Library19=randomaccessfile
-Library20=customtoast
-Library21=slidingmenuwrapper
+Library6=materialcolors
+Library7=materialdialogs
+Library8=oslibrary
+Library9=osstats
+Library10=phone
+Library11=sql
+Library12=reflection
+Library13=randomaccessfile
+Library14=customtoast
+Library15=slidingmenuwrapper
+Library16=icosslideanimation
+Library17=processbutton
+Library18=msos
+Library19=numberprogressbar
+Library20=javaobject
+Library21=runtimepermissions
+Library22=slidingpanels
+Library23=swipetodismiss
+Library24=threading
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: S-Cleaner V2
-	#VersionCode: 2
-	#VersionName: 2.0
+	#VersionCode: 18
+	#VersionName: 2.5.1
 	'SupportedOrientations possible values: unspecified, landscape or portrait.
 	#SupportedOrientations: portrait
 	#CanInstallToExternalStorage: False
@@ -59,6 +71,7 @@ Library21=slidingmenuwrapper
 	#AdditionalRes:C:\Users\Sulomedia\Documents\Apps\Worground\APK-Extractor\resRv
 	#AdditionalRes:C:\Users\Sulomedia\Documents\Apps\Worground\NWM\ress,com.jeremyfeinstein.slidingmenu.lib
 	#AdditionalRes:C:\Users\Sulomedia\Documents\Apps\Worground\BC2\res4
+	#AdditionalRes:H:\LibsJuli 2017\802Compressed\ProcessButtonEx\libProcessButton\Resources
 	#Extends: de.amberhome.materialdialogs.MaterialDialogsActivity
 	#Extends: android.support.v7.app.ActionBarActivity
 	#AdditionalJar: com.android.support:support-v4
@@ -72,18 +85,17 @@ Library21=slidingmenuwrapper
 
 
 Sub Process_Globals
-	'These global variables will be declared once when the application starts.
-	'These variables can be accessed from all modules.
+	Dim infodia As MaterialDialog
 	Private os As OperatingSystem
 	Dim date,time1 As String
-	Private rfont As Typeface= rfont.LoadFromAssets("Flaticon.ttf")
+	Private rfont As Typeface= rfont.LoadFromAssets("micross.ttf")
 	Private package As String="sclean2.com"
 	Dim t1 As Timer
+	Dim ion As Object
 End Sub
 
 Sub Globals
-	'These global variables will be redeclared each time the activity is created.
-	'These variables can only be accessed from this module.
+	Private ani1 As ICOSSlideAnimation
 	Private pack As PackageManager
 	Private mcl As MaterialColors
 	Private kvst,kvsdata,alist,dbase,abase,qbase As KeyValueStore
@@ -94,15 +106,30 @@ Sub Globals
 	Dim sm As SlidingMenu
 	Private Panel1 As Panel
 	Private cb1 As Circlebutton
-	Private ac1 As ACButton
+	
 	Private sico As BitmapDrawable
-	Private bm1 As ImageView
+	Private bm1,bm2 As ImageView
 	Private stext,subtext As Label
 	Dim counter As Int 
+	Dim cs As CSBuilder
+	Private lv2 As ListView
+	Private pcb1 As ProcessButton
+	Private Panel2 As Panel
+	Dim pb As ACButton
+	Private stats As OSStats
+	Private ram As  MSOS
+	Private prog1 As NumberProgressBar
+	Private maintext As Label 
+	Private ltext As Label
+	Private lstext As Label
+	Private proclist,procname,procpid As List
+	Dim pn,appan As Panel
+	Dim es,back As ACFlatButton
+	Private applist As ListView
+	Private ac1 As ACButton
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	'Do not forget to load the layout file created with the visual designer. For example:
 	Activity.LoadLayout("1")
 	abhelper.Initialize
 	t1.Initialize("t1",1000)
@@ -112,26 +139,69 @@ Sub Activity_Create(FirstTime As Boolean)
 	toolbar.SetAsActionBar
 	toolbar.InitMenuListener
 	toolbar.PopupTheme=toolbar.THEME_LIGHT
-	'toolbar.Title=pak.GetApplicationLabel("com.apkbackup.de")
-	toolbar.SubTitle=pack.GetApplicationLabel(package)&" V."&pack.GetVersionName(package)
+	toolbar.Title=pack.GetApplicationLabel(package)
+	'toolbar.SubTitle=pack.GetApplicationLabel(package)
+	abhelper.HomeVisible=True
+	abhelper.ShowUpIndicator = True
+	abhelper.UpIndicatorBitmap=LoadBitmapSample(File.DirAssets,"menu-1.png",40dip,40dip)
 	sm.Initialize("sm")
 	bm1.Initialize("bm1")
+	bm2.Initialize("bm2")
 	stext.Initialize("stext")
 	subtext.Initialize("subtext")
-	subtext.Typeface=rfont
-	stext.Typeface=rfont
-	stext.TextSize=40
-	stext.Gravity=Gravity.CENTER_HORIZONTAL
-	subtext.TextSize=30
-	subtext.Gravity=Gravity.CENTER_HORIZONTAL
-	stext.TextColor=Colors.ARGB(255,29,169,246)
-	subtext.TextColor=Colors.ARGB(255,29,169,246)
-	Activity.AddView(stext,0%x,30%y,100%x,150dip)
-	Activity.AddView(subtext,0%x,80dip,100%x,120dip)
-	Activity.AddView(bm1,25%x,50%y,150dip,150dip)
-	bm1.Visible=False
-	abhelper.ShowUpIndicator = True
-	abhelper.HomeVisible=True
+	prog1.Initialize("prog1")
+	proclist.Initialize
+	procname.Initialize
+	procpid.Initialize
+	pn.Initialize("pn")
+	applist.Initialize("applist")
+	appan.Initialize("appan")
+	
+	es.Initialize("es")
+	back.Initialize("back")
+	bm1.Gravity=Gravity.FILL
+	bm2.Gravity=Gravity.FILL
+	bm2.Bitmap=LoadBitmap(File.DirAssets,"sc-logo.png")
+	pcb1.Initialize("pcb1")
+	pcb1.Visible=False
+	maintext.Initialize("maintext")
+	pb.Initialize("pb")
+	lv1.Initialize("lv1")
+	'############Extra Views######################
+	Activity.AddView(maintext,2%x,5%y,95%x,100dip)
+	Activity.AddView(prog1,10%x,15%y,78%x,100dip)
+	Activity.AddView(bm2,37%x,12%y,80dip,80dip)
+	Activity.AddView(bm1,37%x,34%y,80dip,80dip)
+	Activity.AddView(subtext,5%x,65%y,90%x,20%y)
+	Activity.AddView(stext,5%x,55%y,90%x,20%y)
+	Activity.AddView(pn,0%x,10%y,100%x,100%y)
+	Activity.AddView(appan,0%x,10%y,100%x,100%y)
+	pn.AddView(es,0%x,82%y,100%x,90%y)
+	pn.AddView(lv1,1%x,1%y,100%x,80%y)
+	pn.Visible=False
+	appan.Visible=False
+	appan.AddView(applist,1%x,1%y,96%x,80%y)
+	appan.AddView(back,0%x,82%y,100%x,90%y)
+	appan.Color=Colors.ARGB(210,0,0,0)
+	applist.Color=Colors.Transparent
+	'###Status Bar Settungs#######################
+	prog1.Visible=False
+	prog1.Color=Colors.Transparent
+	prog1.ProgressTextColor=mcl.md_black_1000
+	prog1.ProgressTextSize=25
+	prog1.ReachedBarColor=mcl.md_light_blue_A700
+	prog1.ReachedBarHeight=20
+	prog1.UnreachedBarHeight=10
+	prog1.UnreachedBarColor=mcl.md_amber_A400
+	prog1.Suffix="%"
+	
+	'#################maintext options#############
+	maintext.TextSize=22
+	maintext.Typeface=rfont
+	maintext.Gravity=Gravity.CENTER_HORIZONTAL
+	maintext.TextColor=mcl.md_black_1000
+	maintext.Visible=False
+	
 	DateTime.TimeFormat="HH:mm"
 	DateTime.DateFormat="dd-MM-yyyy"
 	date=DateTime.Date(DateTime.Now)
@@ -145,18 +215,18 @@ Sub Activity_Create(FirstTime As Boolean)
 	Dim lftMenu As Panel
 	lftMenu.Initialize("")
 	lftMenu.LoadLayout("left")
-	Dim offset As Int = 20%x
+	Dim offset As Int = 25%x
 	sm.BehindOffset = offset
 	sm.Menu.AddView(lftMenu, 0, 0, 100%x-offset, 100%y)
 	sm.Mode = sm.LEFT
-	lv1.Initialize("lv1")
+
 	Dim la1,la2 As Label
-	la2.Initialize("la2")
-	la1.Initialize("la1")
+	la2.Initialize("")
+	la1.Initialize("")
 	la1=lv1.TwoLinesAndBitmap.Label
 	la2=lv1.TwoLinesAndBitmap.SecondLabel
-	la1.TextSize=18
-	la2.TextSize=15
+	la1.TextSize=20
+	la2.TextSize=25
 	la1.Typeface=rfont
 	la2.Typeface=rfont
 	la1.TextColor=mcl.md_white_1000
@@ -164,43 +234,38 @@ Sub Activity_Create(FirstTime As Boolean)
 	lv1.TwoLinesAndBitmap.ImageView.Height=48dip
 	lv1.TwoLinesAndBitmap.ImageView.Width=48dip
 	lv1.TwoLinesAndBitmap.ItemHeight=65dip
+	'####### RAM Initial######
+	stats.Initialize(400,100,Me,"Stats")
+	stats.StartStats
+	'####Animation###########
+	ani1.SlideFromLeftToRight("ani1",300,1)
 	If FirstTime=True Then 
-		stext.Text=alist.ListKeys.Size&CRLF&"Apps installiert"
-		subtext.Text="Hallo!"
-		CallSub(cmodul,"info_remote")
+		get_data
+		
 	End If
 	counter=0
 	left
+	proc_pack
 	acb_method
+	text_meth
+	sub_list
 End Sub
 
 
 
 Sub Activity_KeyPress (KeyCode As Int) As Boolean 'Return True to consume the event
 	If KeyCode=KeyCodes.KEYCODE_BACK Then
-		exit_click
+		get_data
+		acb_method
+		sub_list
+		stats.EndStats
+		Activity.Finish
 	End If
 	Return True
 End Sub
 
-Sub Activity_CreateMenu(menu As ACMenu)
-	Dim eim As BitmapDrawable
-	eim.Initialize(LoadBitmap(File.DirAssets,"ic_exit_to_app_white_48dp.png"))
-	Dim fim1,climg1 As BitmapDrawable
-	fim1.Initialize(LoadBitmap(File.DirAssets,"ic_settings_applications_white_36dp.png"))
-	climg1.Initialize(LoadBitmap(File.DirAssets,"ic_apps_white_36dp.png"))
-	menu.Clear
-	Dim item,item2,item3 As ACMenuItem
-	item3=toolbar.Menu.Add2(0, 0, "Menu", climg1)
-	item=toolbar.Menu.Add2(1, 1, "SMenu", fim1)
-	item2=toolbar.Menu.Add2(2, 2, "Exit", eim)
-	item.ShowAsAction = item.SHOW_AS_ACTION_ALWAYS
-	item2.ShowAsAction = item2.SHOW_AS_ACTION_ALWAYS
-	item3.ShowAsAction = item3.SHOW_AS_ACTION_ALWAYS
-End Sub
-
 Sub toolbar_NavigationItemClick
-	exit_click
+	sm.ShowMenu
 End Sub
 
 Sub toolbar_MenuItemClick (Item As ACMenuItem)
@@ -216,67 +281,220 @@ End Sub
 
 
 Sub Activity_Resume
-	t1.Enabled=False
+	If alist.ListKeys.Size>0 Then
+		text_meth
+		
+	Else
+		stext.Text="Hallo..!"
+		subtext.Text="Tipp: benutze den Reinigun Button"&CRLF&"für einene ersten Scan!"
+	End If
+	get_data
+	acb_method
+	sub_list
+	stats.StartStats
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
-
+	If UserClosed=False Then 
+			t1.Enabled=False
+			text_meth
+			get_data
+	End If
+	Return 
 End Sub
 
 
+
+Sub t_line
+	Dim Builder As MaterialDialogBuilder
+	Dim inf As BitmapDrawable
+	inf.Initialize(LoadBitmap(File.DirAssets,"push-pin.png"))
+	Dim l1,l2 As Label
+	Dim pnl As Panel
+	pnl.Initialize("pnl")
+	l1.Initialize("")
+	l2.Initialize("")
+	l2.TextSize=18
+	l1.TextSize=20
+	l1.textcolor=mcl.md_black_1000
+	l1.Text="Apps: "&alist.ListKeys.Size&CRLF&"Daten: "&kvsdata.get("cz")&CRLF&"RAM: "&FormatFileSize(dbase.Get("ru"))&" optimiert"
+	l2.textcolor=Colors.ARGB(255,0,0,0)
+	l1.Gravity=Gravity.TOP
+	l1.Typeface=rfont
+	l2.Typeface=rfont
+	Builder.Initialize("resdia")
+	Builder.Title("Log:").TitleColor(mcl.md_black_1000).Icon(inf).LimitIconToDefaultSize.Theme(Builder.THEME_Light).Content(l1.Text).ContentColor(mcl.md_black_1000).ContentLineSpacing(1dip).Cancelable(False).PositiveText("Beenden").PositiveColor(mcl.md_light_blue_A700).ContentGravity(Builder.GRAVITY_START)
+	infodia=Builder.Show
+	infodia.Show
+End Sub
+
+Sub resdia_ButtonPressed (Dialog As MaterialDialog, Action As String)
+	Select Action
+		Case Dialog.ACTION_POSITIVE
+			app_info
+			Animator.setanimati("popup_enter", "popup_exit")
+		Case Dialog.ACTION_NEGATIVE
+			
+		Case Dialog.ACTION_NEUTRAL
+			
+	End Select
+End Sub
+
+Sub pb_Click
+	ac1.SetVisibleAnimated(350,True)
+End Sub
+
 Sub acb_method
-	ac1.Text="Scan"
+	ac1.Text="Reinigung starten:"
 	ac1.Typeface=rfont
-	ac1.TextSize=25
+	ac1.Gravity=Gravity.CENTER
+	ac1.TextSize=17
+	
 End Sub
 
 Sub left
 	Dim la1,la2 As Label
-	la2.Initialize("la2")
-	la1.Initialize("la1")
+	la2.Initialize("")
+	la1.Initialize("")
 	la1=leftlist.TwoLinesAndBitmap.Label
 	la2=leftlist.TwoLinesAndBitmap.SecondLabel
-	leftlist.TwoLinesAndBitmap.ImageView.Height=48dip
-	leftlist.TwoLinesAndBitmap.ImageView.Width=48dip
-	leftlist.TwoLinesAndBitmap.ItemHeight=65dip
-	la1.TextSize=18
-	la2.TextSize=15
+	leftlist.TwoLinesAndBitmap.ImageView.Height=34dip
+	leftlist.TwoLinesAndBitmap.ImageView.Width=34dip
+	'leftlist.TwoLinesAndBitmap.ItemHeight=60dip
+	la1.TextSize=15
+	la2.TextSize=13
 	la1.Typeface=rfont
 	la2.Typeface=rfont
-	la1.TextColor=mcl.md_black_1000
+	la1.TextColor=mcl.md_grey_900
 	la2.TextColor=Colors.ARGB(180,255,255,255)
-	lv1.TwoLinesAndBitmap.ImageView.Height=48dip
-	lv1.TwoLinesAndBitmap.ImageView.Width=48dip
-	lv1.TwoLinesAndBitmap.ItemHeight=65dip
-	leftlist.AddTwoLinesAndBitmap2("App List","Installierte Programme entfernen oder ändern",LoadBitmap(File.DirAssets,"ic_settings_applications_white_36dp.png"),0)
-	leftlist.AddTwoLinesAndBitmap2("Feedback","Sende uns Vorschläge",LoadBitmap(File.DirAssets,"ic_message_white_36dp.png"),1)
-	Return
+	ltext.TextColor=mcl.md_grey_900
+	ltext.TextSize=18
+	ltext.Typeface=rfont
+	ltext.Gravity=Gravity.CENTER
+	ltext.Text="Hauptmenü"
+	lstext.TextColor=mcl.md_white_1000
+	lstext.TextSize=13
+	lstext.Typeface=rfont
+	lstext.Gravity=Gravity.CENTER
+	lstext.Text="Version: "&pack.GetVersionName(package)
+	leftlist.AddTwoLinesAndBitmap2("App Verwaltung","Anwendungen verwalten",LoadBitmap(File.DirAssets,"app.png"),3)
+	leftlist.AddTwoLinesAndBitmap2("Log","zeige letzte Ergebnisse",LoadBitmap(File.DirAssets,"list.png"),0)
+	leftlist.AddTwoLinesAndBitmap2("Info","Über S-Cleaner",LoadBitmap(File.DirAssets,"push-pin.png"),1)
+	leftlist.AddTwoLinesAndBitmap2("Teilen","via Social-Network teilen",LoadBitmap(File.DirAssets,"share-2.png"),4)
+	leftlist.AddTwoLinesAndBitmap2("Exit","Programm beenden",LoadBitmap(File.DirAssets,"exit.png"),2)
 End Sub
 
 Sub leftlist_ItemClick (Position As Int, Value As Object)
 	Select Value
 		Case 0
-			
+			sm.HideMenus
+			app_info
+			Animator.setanimati("extra_in", "extra_out")
 		Case 1
 			sm.HideMenus
-	
+		about
 			Animator.setanimati("extra_in", "extra_out")
+		Case 2 
+			sm.HideMenus
+			exit_click
+		Case 3
+			sm.HideMenus
+			pack_manager
+			'ToastMessageShow("steht bald bereit..",False)
+		Case 4
+			sm.HideMenus
+			app_share	
 	End Select
+End Sub
+
+Sub sub_list
+	stext.TextSize=18
+		bm1.Bitmap=LoadBitmap(File.DirAssets,"smartphone.png")
+	stext.Text=cs.Initialize.Size(18).Append("letzte reinigung:").pop.Color(mcl.md_light_blue_A700).append(CRLF&" App(s): "&alist.ListKeys.Size&CRLF&"Daten: "&kvsdata.Get("cz")).PopAll
+End Sub
+
+Sub get_data
+	lv2.Clear
+	Dim la,la5 As Label
+	la5.Initialize("")
+	la.Initialize("")
+	la=lv2.SingleLineLayout.Label
+	la.TextSize=14
+	la.Typeface=rfont
+	la.TextColor=mcl.md_black_1000
+	la.Gravity=Gravity.CENTER_HORIZONTAL
+	lv2.SingleLineLayout.ItemHeight=50dip
+	Dim plist As List 
+	plist.Initialize
+	plist=pack.GetInstalledPackages
+	lv2.AddSingleLine2(plist.Size&"(System)/"&applist.Size&"(Nutzer)"&CRLF&"Anwendungen auf "&os.Device&" instaliert",0)
 End Sub
 
 
 Sub ac1_Click
-	CallSub(cmodul,"start")
-	bm1.SetVisibleAnimated(200,True)
-	ac1.SetVisibleAnimated(100,False)
-	Panel1.SetVisibleAnimated(100,False)
+	ac1.SetVisibleAnimated(210,False)
+	lv2.SetVisibleAnimated(210,False)
+	bm2.SetVisibleAnimated(210,False)
+	abhelper.Hide
+	prog1.SetVisibleAnimated(120,True)
+	subtext.SetVisibleAnimated(100,True)
+	maintext.SetVisibleAnimated(100,True)
+	prog1.ReachedBarColor=mcl.md_light_blue_A700
+	ani1.StartAnim(bm1)
+	maintext.Text="Prüfe Anwendungen:"
+	stext.Text="..."
+	CallSub(Starter,"start")
 End Sub
 
+
 Sub c_start
-	ProgressDialogShow("bereinige "&alist.ListKeys.Size&" App´s ("&kvsdata.Get("cz")&"), bitte warten..")
-	CallSub(cmodul,"start_c")
+	'clean_c
+	'CallSub(Starter,"start_c")
+	task_service
 	t1.Enabled=True
+
 End Sub
+
+
+Sub clean_c
+	Dim l1,l2 As Label
+	l1.Initialize("")
+	l2.Initialize("")
+	l2.TextSize=18
+	l1.TextSize=18
+	l1.textcolor=mcl.md_black_1000
+	l1.Text=FormatFileSize(kvsdata.Get("cp"))
+	l2.Text="bereinige.."&alist.ListKeys.Size
+	l2.textcolor=Colors.ARGB(255,0,0,0)
+	l1.Gravity=Gravity.TOP
+	l1.Typeface=rfont
+	l2.Typeface=rfont
+	stext.Text=cs.Initialize.Size(20).Color(mcl.md_deep_purple_600).Append(l2.Text).pop.append(CRLF&l1.Text).PopAll
+	subtext.Text=kvsdata.Get("cz")
+End Sub
+
+Sub task_service
+	alist.Remove(package)
+	Log(package&" removed")
+	For Each h As String In alist.ListKeys
+		os.killBackgroundProcesses(h)
+	Next
+	stext.Text="optimiere "&FormatFileSize(dbase.Get("ru"))&" RAM"
+	subtext.Text="bereinige Anwendungsdaten "&CRLF&kvsdata.Get("cz")
+End Sub
+
+Sub task_close
+	prog1.ReachedBarColor=Colors.ARGB(255,24,228,68)
+	bm1.Bitmap=LoadBitmap(File.DirAssets,"success.png")
+End Sub
+
+Sub stats_Update(CPUEfficiency() As Float, RAMUsage As Float)
+	Dim ru As Int
+	'Log(RAMUsage*1024*1024*10-ram.getSystemTotalMemorySize)
+	ru=RAMUsage*1024*1024*10-ram.getSystemTotalMemorySize
+	dbase.Put("ru",ru)
+End Sub
+
 
 Sub update_modul
 	Dim dd As String 
@@ -284,51 +502,96 @@ Sub update_modul
 	c1=kvsdata.Get("c")
 	c2=kvsdata.Get("to")
 	dd=qbase.Get(c1)
-	sum=100/c2*c1	
-	stext.TextSize=60
-	stext.Text=sum&"%"
+	stext.TextSize=18
+	subtext.TextSize=18
+	sum=100/c2*c1
+	prog1.Progress=sum
 	bm1.Gravity=Gravity.FILL
+	bm1.Bitmap=LoadBitmap(File.DirAssets,"smartphone-11.png")
+	
 	Try
 		sico=pack.GetApplicationIcon(dd)
-		If c1<c2 Then
+		
+		If c1<=c2 Then
 			bm1.Bitmap=sico.Bitmap
+			stext.Text=pack.GetApplicationLabel(dd)
 			subtext.Text=dd
 		End If
+		
 	Catch
 		Log(LastException.Message)
 	End Try
 	If c1=c2 Then
-		'bm1.Visible=False
-		
+		prog1.ReachedBarColor=mcl.md_amber_A400'Colors.ARGB(255,24,228,68)
+		bm1.Bitmap=LoadBitmap(File.DirAssets,"warning.png")
+		CallSub(Starter,"start_c")
 	End If
+	Return
 End Sub
+
+
 
 Sub t1_Tick
 	counter=counter+1	
-	If counter > 0 Then CallSub(cmodul,"start_c")
-	If counter = 3 Then 
-		ProgressDialogHide
+	
+	If counter > 1 Then 
+		CallSub(Starter,"start_c")
+		
+	End If
+	If counter > 2 Then 
+		maintext.Text="Beende Hintergrund Tasks.."
+		stext.Text="Beende Hintergrund Tasks.."
+		'task_close
+	End If
+	If counter > 4 Then 
+		'mcp.SetVisibleAnimated(200,False)
+		
+		ani1.StopAnin(bm1)
+		maintext.Text="Fertig..!"
+		task_close
+	End If
+	If counter = 6 Then 
 		t1.Enabled=False
-		finish_modul
 		counter=0
-		subtext.Text=kvsdata.Get("cz")&" bereinigt"
-		stext.TextSize=45
-		stext.Text=alist.ListKeys.Size&CRLF&" Anwendungen"
+	finish_modul
 	End If
 End Sub
 
 Sub finish_modul
-	stext.Text="clean!"
-	bm1.SetVisibleAnimated(150,False)
+	'bm1.Bitmap=LoadBitmap(File.DirAssets,"success.png")
 	ac1.SetVisibleAnimated(150,True)
-	Panel1.SetVisibleAnimated(150,True)
+	lv2.SetVisibleAnimated(180,True)
+	bm2.SetVisibleAnimated(180,True)
+	subtext.SetVisibleAnimated(100,False)
+	maintext.SetVisibleAnimated(100,False)
+	stext.SetVisibleAnimated(100,True)
+	Activity.Color=Colors.ARGB(255,255,255,255)
+	'mcp.SetVisibleAnimated(200,False)
+	prog1.SetVisibleAnimated(200,False)
+	abhelper.Show
+	ani1.StopAnin(bm1)
+	text_meth
+	sub_list
+	t_line
+	acb_method
+	get_data
 End Sub
 
+Sub text_meth
+	subtext.Typeface=rfont
+	stext.Typeface=rfont
+	stext.Gravity=Gravity.CENTER_HORIZONTAL
+	subtext.TextSize=15
+	subtext.Gravity=Gravity.CENTER_HORIZONTAL
+	stext.TextColor=Colors.ARGB(255,0,0,0)
+	subtext.TextColor=Colors.ARGB(255,0,0,0)	
+End Sub
+
+
 Sub exit_click
-	Dim infodia As MaterialDialog
 	Dim Builder As MaterialDialogBuilder
 	Dim inf As BitmapDrawable
-	inf.Initialize(LoadBitmap(File.DirAssets,"ic_https_white_36dp.png"))
+	inf.Initialize(LoadBitmap(File.DirAssets,"ic_new_releases_black_18dp.png"))
 	Dim l1,l2 As Label
 	Dim pnl As Panel
 	pnl.Initialize("pnl")
@@ -343,7 +606,7 @@ Sub exit_click
 	l1.Typeface=rfont
 	l2.Typeface=rfont
 	Builder.Initialize("closedia")
-	Builder.Title("App Info:?").TitleColor(mcl.md_red_800).Icon(inf).LimitIconToDefaultSize.Theme(Builder.THEME_Light).Content(l1.Text).ContentLineSpacing(1dip).Cancelable(True).NeutralText("Abbrechen").Typeface(rfont,rfont).NeutralColor(mcl.md_blue_A700).PositiveText("Ja bitte").PositiveColor(Colors.ARGB(255,217,87,217)).ContentGravity(Builder.GRAVITY_START)
+	Builder.Title("Beenden:?").TitleColor(mcl.md_red_800).Icon(inf).LimitIconToDefaultSize.Theme(Builder.THEME_Light).Content(l1.Text).ContentLineSpacing(1dip).Cancelable(True).NeutralText("Abbrechen").Typeface(rfont,rfont).NeutralColor(mcl.md_blue_A700).PositiveText("Ja bitte").PositiveColor(Colors.ARGB(255,217,87,217)).ContentGravity(Builder.GRAVITY_START)
 	infodia=Builder.Show
 	infodia.Show
 End Sub
@@ -357,6 +620,30 @@ Sub closedia_ButtonPressed (Dialog As MaterialDialog, Action As String)
 		Case Dialog.ACTION_NEUTRAL
 			
 	End Select
+End Sub
+
+
+Sub about
+	Dim Builder As MaterialDialogBuilder
+	Dim inf As BitmapDrawable
+	inf=pack.GetApplicationIcon(package)
+	Dim l1,l2 As Label
+	Dim pnl As Panel
+	pnl.Initialize("pnl")
+	l1.Initialize("")
+	l2.Initialize("")
+	l2.TextSize=15
+	l1.TextSize=15
+	l1.textcolor=mcl.md_black_1000
+	l1.Text=pack.GetApplicationLabel(package)&CRLF&"Version: "&pack.GetVersionName(package)&CRLF&"© 2017-2018 Sulomedia"&CRLF&"Hilfe und Infomationen"&CRLF&"www.sulomedia.de"
+	l2.textcolor=Colors.ARGB(255,0,0,0)
+	l1.Gravity=Gravity.TOP
+	l1.Typeface=rfont
+	l2.Typeface=rfont
+	Builder.Initialize("abdia")
+	Builder.Title("App Info").TitleColor(mcl.md_black_1000).Icon(inf).LimitIconToDefaultSize.Theme(Builder.THEME_Light).Content(l1.Text).ContentLineSpacing(1dip).Cancelable(True).Typeface(rfont,rfont).PositiveText("Ok").PositiveColor(Colors.ARGB(255,0,0,0)).ContentGravity(Builder.GRAVITY_START)
+	infodia=Builder.Show
+	infodia.Show
 End Sub
 
 Sub FormatFileSize(Bytes As Float) As String
@@ -373,3 +660,223 @@ Sub FormatFileSize(Bytes As Float) As String
 		Return NumberFormat(Si, 1, 2) & Unit(I)
 	End If
 End Sub
+
+Sub lv2_ItemClick (Position As Int, Value As Object)
+		If Value=Position Then 
+		
+		ProgressDialogShow("Bitte warte...")
+			pack_manager
+			Log("pck")
+		End If
+End Sub
+
+Sub app_info
+	es.Text="Ok"
+	es.Typeface=rfont
+	es.TextColor=mcl.md_white_1000
+	es.Color=mcl.md_light_blue_A700
+	es.Gravity=Gravity.CENTER_HORIZONTAL
+	Dim ai As BitmapDrawable
+	pn.Color=Colors.ARGB(220,0,0,0)
+	Dim la1,la2 As Label
+	la2.Initialize("")
+	la1.Initialize("")
+	la1=lv1.TwoLinesAndBitmap.Label
+	la2=lv1.TwoLinesAndBitmap.SecondLabel
+	la1.TextSize=15
+	la2.TextSize=12
+	la1.Typeface=rfont
+	la2.Typeface=rfont
+	la1.TextColor=mcl.md_white_1000
+	la2.TextColor=Colors.ARGB(255,255,255,255)
+	lv1.TwoLinesAndBitmap.ImageView.Height=48dip
+	lv1.TwoLinesAndBitmap.ImageView.Width=48dip
+	lv1.TwoLinesAndBitmap.ItemHeight=55dip
+	lv1.Clear
+	If alist.ListKeys.Size>=0 Then 
+	For Each i As String In  alist.ListKeys
+		Log(alist.Get(i))
+		ai=pack.GetApplicationIcon(i)
+		lv1.AddTwoLinesAndBitmap(pack.GetApplicationLabel(i),i&", "&FormatFileSize(alist.Get(i)),ai.Bitmap)
+	Next
+	Else 
+		lv1.AddTwoLinesAndBitmap("Leer:","keine daten gefunden",LoadBitmap(File.DirAssets,"push-pin.png"))
+	End If
+	If pn.Visible=True Then
+		pn.SetVisibleAnimated(350,False)
+		backtrue
+		Else
+		pn.SetVisibleAnimated(350,True)
+		pn.BringToFront
+		ac1.SetVisibleAnimated(350,False)
+	End If
+End Sub
+
+Sub es_Click
+	If pn.Visible=True Then
+		pn.SetVisibleAnimated(350,False)
+		backtrue
+	Else
+		pn.SetVisibleAnimated(350,True)
+		pn.BringToFront
+		ac1.SetVisibleAnimated(350,False)
+	End If
+End Sub
+
+
+Sub pack_manager
+	ProgressDialogHide
+	ac1.SetVisibleAnimated(200,False)
+	appan.SetVisibleAnimated(300,True)
+	back.Text="zurück"
+	back.Typeface=rfont
+	back.TextColor=mcl.md_white_1000
+	back.Color=mcl.md_light_blue_A700
+	back.Gravity=Gravity.CENTER_HORIZONTAL
+	proc_pack
+End Sub
+
+Sub proc_pack
+	Dim la1,la2 As Label
+	la2.Initialize("")
+	la1.Initialize("")
+	la1=applist.TwoLinesAndBitmap.Label
+	la2=applist.TwoLinesAndBitmap.SecondLabel
+	la1.TextSize=15
+	la2.TextSize=12
+	la1.Typeface=rfont
+	la2.Typeface=rfont
+	la2.TextColor=mcl.md_amber_700'Colors.ARGB(255,255,255,255)
+	applist.TwoLinesAndBitmap.ImageView.Height=48dip
+	applist.TwoLinesAndBitmap.ImageView.Width=48dip
+	applist.TwoLinesAndBitmap.ItemHeight=70dip
+	applist.Clear
+	Dim Obj1, Obj2, Obj3 As Reflector
+	Dim size, i, flags As Int
+	Dim name As String
+	Obj1.Target = Obj1.GetContext
+	Obj1.Target = Obj1.RunMethod("getPackageManager") ' PackageManager
+	Obj1.Target = Obj1.RunMethod2("getInstalledPackages", 0, "java.lang.int") ' List<PackageInfo>
+	size = Obj1.RunMethod("size")
+	For i = 0 To size -1
+		Obj2.Target = Obj1.RunMethod2("get", i, "java.lang.int") ' PackageInfo
+		name = Obj2.GetField("packageName")
+		Obj3.Target = Obj2.GetField("applicationInfo") ' ApplicationInfo
+		flags = Obj3.GetField("flags")
+		If Bit.And(flags, 1)  = 0 Then
+			'app is not in the system image
+			'Log(name & " : " & flags)
+			Dim icon As BitmapDrawable=pack.GetApplicationIcon(name)
+			applist.AddTwoLinesAndBitmap2(pack.GetApplicationLabel(name)&" - "&pack.GetVersionName(name),"Pfad: "&get_respath(name)&CRLF&name,icon.Bitmap,name)
+		End If
+	Next
+End Sub
+
+Sub applist_ItemClick (Position As Int, Value As Object)
+	For Each p As String In pack.GetInstalledPackages
+		Dim res As Int 
+		Dim name As String=pack.GetApplicationLabel(p)
+		Try
+		Dim icon As BitmapDrawable=pack.GetApplicationIcon(p)
+		If Value=p Then 
+			res=Msgbox2("Option:"&CRLF&"Starten (öffnet die Anwendung in einem neuen Fenster)"&CRLF&"Entfernen (Löscht die Anwendung von ihrem Telefon!)",name,"Starten","Ende","Entfernen",icon.Bitmap)
+		End If
+		Catch
+			Log(LastException.Message)
+		End Try 
+	
+		If res=DialogResponse.POSITIVE Then 
+				Dim in As Intent
+				in=pack.GetApplicationIntent(p)
+				If in.IsInitialized Then 
+					ToastMessageShow("Starte "&name,False)
+				appan.SetVisibleAnimated(300,False)
+				backtrue
+					StartActivity(in)				
+				End If
+			Else 
+				If res=DialogResponse.NEGATIVE Then 
+					Dim i As Intent
+					i.Initialize("android.intent.action.DELETE","package:"&p)
+				appan.SetVisibleAnimated(300,False)
+				backtrue
+					ToastMessageShow("Deinstalation gestartet..",False)
+				StartActivity(i)
+				End If
+		End If
+	Next 
+	Return
+End Sub
+
+Sub back_Click
+		appan.SetVisibleAnimated(300,False)
+		backtrue
+End Sub
+
+Sub backtrue
+	If ac1.Visible=True Then 
+		ac1.SetVisibleAnimated(300,False)
+	Else 
+	ac1.SetVisibleAnimated(300,True)
+End If 
+End Sub
+
+Sub app_share
+	Dim i As Intent
+	i.Initialize(i.ACTION_SEND, "")
+	i.SetType("text/plain")
+	i.PutExtra("android.intent.extra.TEXT", "https://s-cleaner.de.uptodown.com/android")
+	i.PutExtra("android.intent.extra.SUBJECT", Application.LabelName&"-"&Application.VersionName&CRLF&"bereinigt dein Telefon einfach und schnell..")
+	StartActivity(i)
+End Sub
+
+
+Sub GetFileName(FullPath As String) As String
+	Return FullPath.SubString(FullPath.LastIndexOf("/")+1)
+End Sub
+
+
+Sub GetParentPath(path As String) As String
+	Dim Path1 As String
+	If path = "/" Then
+		Return "/"
+	End If
+	L = path.LastIndexOf("/")
+	If L = path.Length - 1 Then
+		Path1 = path.SubString2(0,L)
+	Else
+		Path1 = path
+	End If
+	L = path.LastIndexOf("/")
+	If L = 0 Then
+		L = 1
+	End If
+	Return Path1.SubString2(0,L)
+End Sub
+
+Sub GetActivitiesInfo(pac As String) As Object
+	Dim r As Reflector
+	r.Target = r.GetContext
+	r.Target = r.RunMethod("getPackageManager")
+	r.Target = r.RunMethod3("getPackageInfo", pac, "java.lang.String", 0x00000001, "java.lang.int")
+	Return r.GetField("applicationInfo")
+End Sub
+
+Sub GetSourceDir(AppInfo As Object) As String
+	Try
+		Dim r As Reflector
+		r.Target = AppInfo
+		Return r.GetField("sourceDir")
+	Catch
+		Return ""
+	End Try
+End Sub
+
+Sub get_respath(pac As String) As Object
+	Dim r As Reflector
+	r.Target = r.GetContext
+	r.Target = r.RunMethod("getPackageManager")
+	r.Target = r.RunMethod3("getApplicationInfo", pac, "java.lang.String", 0x00000001, "java.lang.int")
+	Return r.GetField("dataDir")
+End Sub
+
